@@ -1,0 +1,96 @@
+.star {
+	position: absolute;
+	border-radius: 50%;
+	background-color: #b3b3b3;
+	text-align: center;
+}
+
+.star::after, .star a{
+	color: #b3b3b3;
+	position: absolute;
+	transform: translateX(-50%);
+	font-family: "Baby Doll";
+	font-size: 14pt;
+	text-decoration: none;
+}
+
+#star1 {
+	width: 10px; height: 10px;
+	top: 15%; left: 5%;
+}
+#star2 {
+	width: 17px; height: 17px;
+	top: 12%; left: 26%;
+}
+#star3 {
+	width: 12px; height: 12px;
+	top: 29%; left: 39%;
+}
+#star4 {
+	width: 15px; height: 15px;
+	top: 47%; left: 54%;
+}
+#star5 {
+	width: 17px; height: 17px;
+	top: 52%; left: 88%;
+}
+#star6 {
+	width: 21px; height: 21px;
+	top: 81%; left: 81%;
+}
+#star7 {
+	width: 10px; height: 10px;
+	top: 74%; left: 56%;
+}
+
+/* #star1::after{
+	content: "Inicio"; 
+	bottom: -1.5em;
+}
+#star2::after{ content: "Nosotros";
+	top: -1.2em;
+}
+#star3::after{ content: "Volun\atari\a ado";
+	top: 1.5em;
+}
+#star4::after{ content: "Donacio\anes";
+	bottom: 1em;
+	left: 150%;
+}
+#star5::after{ content: "Con\atac\ato";
+	transform: translateX(0);
+	transform: translateY(-50%);
+	left: 150%;
+}
+#star6::after{ content: "Blog";
+	bottom: -1.5em;
+	left: 150%;
+}
+#star7::after{ content: "Tienda";
+	bottom: -1.5em;
+} */
+#star1 a{
+	bottom: -1.5em;
+}
+#star2 a{ content: "Nosotros";
+	top: -1.2em;
+}
+#star3 a{
+	top: 1.5em;
+}
+#star4 a{
+	bottom: 1em;
+	left: 150%;
+}
+#star5 a{
+	transform: translateX(0);
+	transform: translateY(-50%);
+	left: 150%;
+}
+#star6 a{
+	bottom: -1.5em;
+	left: 150%;
+}
+#star7 a{
+	bottom: -1.5em;
+}
