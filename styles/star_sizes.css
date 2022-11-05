@@ -5,7 +5,7 @@
 	text-align: center;
 }
 
-.star::after, .star a{
+.star, .star a{
 	color: #b3b3b3;
 	position: absolute;
 	transform: translateX(-50%);
