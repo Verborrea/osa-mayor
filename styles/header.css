@@ -8,6 +8,9 @@ header {
 #logo {
 	text-align: center;
 	padding: 1em;
+	margin-bottom: 1em;
+	color: white;
+	font-size: 12pt;
 }
 
 #logo img{
@@ -38,6 +41,10 @@ header {
 	}
 	#logo img{
 		width: 80vh;
+	}
+	#logo {
+		font-size: 16pt;
+		margin-bottom: 0;
 	}
 	#gif1, #gif2 {
 		display: inline;

@@ -1,16 +1,60 @@
 @font-face {
 	font-family: "myFont";
-	src: url('../media/babydoll.woff') format('woff'),
-       url('../media/babydoll.ttf') format('truetype');
+	src: url('../media/babydoll.woff') format('woff');
+}
+
+:root {
+	--texto1: #000000;
+	--texto2: #FFFFFF;
+	--hover: #b3b3b3;
+	--enfasis1: #C58BFF;
+	--enfasis2: #484848;
 }
 
 body {
 	margin: 0;
-	background-color: yellowgreen;
+	font-family: "Baby Doll", "myFont";
+}
+
+main {
+	margin: 0 1em;
+}
+
+h1 b{
+	color: var(--enfasis1);
+}
+
+main p {
+	color: var(--enfasis2);
+}
+
+footer {
+	background-image: url(../media/background.jpg);
+	text-align: center;
+	color: var(--enfasis2);
+	font-size: 13pt;
+}
+
+#footer_navbar a{
+	text-decoration: none;
+	color: var(--texto2);
+}
+
+#footer_navbar a:hover{
+	color: var(--hover);
+}
+
+#footer_navbar {
+	padding: 1em 0;
+}
+
+footer #copyright{
+	margin: 0;
+	padding-bottom: 2em;
 }
 
 @media (min-width: 600px) {
-	body {
-		background-color: white;
+	#social_media {
+		height: 35px;
 	}
 }

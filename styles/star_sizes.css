@@ -1,15 +1,14 @@
 .star {
 	position: absolute;
 	border-radius: 50%;
-	background-color: #b3b3b3;
+	background-color: var(--hover);
 	text-align: center;
 }
 
 .star, .star a{
-	color: #b3b3b3;
+	color: var(--hover);
 	position: absolute;
 	transform: translateX(-50%);
-	font-family: "Baby Doll", "myFont";
 	font-size: 16pt;
 	text-decoration: none;
 }
