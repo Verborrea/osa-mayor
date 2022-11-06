@@ -35,6 +35,10 @@ footer {
 	font-size: 13pt;
 }
 
+footer a img {
+    padding: 0 1em;
+}
+
 #footer_navbar a{
 	text-decoration: none;
 	color: var(--texto2);
@@ -54,7 +58,7 @@ footer #copyright{
 }
 
 @media (min-width: 600px) {
-	#social_media {
+	.social_media {
 		height: 35px;
 	}
 }
