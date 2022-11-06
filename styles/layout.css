@@ -31,7 +31,7 @@ main p {
 footer {
 	background-image: url(../media/background.jpg);
 	text-align: center;
-	color: var(--enfasis2);
+	color: var(--hover);
 	font-size: 13pt;
 }
 
