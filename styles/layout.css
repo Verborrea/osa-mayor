@@ -29,7 +29,7 @@ main p {
 }
 
 footer {
-	background-image: url(../media/background.jpg);
+	background-image: url(../media/pattern.png);
 	text-align: center;
 	color: var(--hover);
 	font-size: 13pt;
