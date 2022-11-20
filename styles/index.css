@@ -1,7 +1,3 @@
-#intro_img {
-	width: 100vw;
-}
-
 #conocemas {
 	width: 80vw;
 	margin: 0 auto;
@@ -29,6 +25,60 @@ h1 {
 	text-align: center;
 }
 @media(min-width:600px){h1{font-size: 40pt}}
+/* ======================== Section - Intro ======================== */
+#intro_img {
+	width: 100vw;
+}
+#intro {
+	position: relative;
+}
+#introbox {
+	position: relative;
+}
+#introbox h1 {
+	margin: -1px auto;
+	padding-top: 1rem;
+	color: white;
+	background-color: black;
+}
+#introbox-cont{
+	font-size: 14pt;
+	padding: 1.5rem;
+	color: white;
+	line-height: 1.5em;
+	background-color: black;
+}
+#introbox-cont div {
+	margin-bottom: 1rem;
+}
+#introbox a{
+	display: block;
+	text-decoration: none;
+	font-size: 14pt;
+	color: var(--enfasis1);
+	text-align: right;
+}
+@media(min-width:900px){
+	#introbox h1 {
+		background-color: unset;
+		padding: 0.5rem 0;
+	}
+	#introbox {
+		position: absolute;
+		bottom: 10%;
+		right: 0;
+		width: 75%;
+		max-width: 60em;
+	}
+	#introbox-cont {
+		box-shadow: -18px 18px 0 -5px white,
+		-18px 18px 0 5px black;
+		font-size: 18pt;
+	}
+	#introbox a{
+		font-size: 18pt;
+	}
+}
 /* ====================== Section - Prensa ======================= */
 #article-container {
 	display: flex;
@@ -72,6 +122,9 @@ h1 {
 		flex-direction: row;
 		width: 75%;
 		margin: 0 auto;
+	}
+	.art-res {
+		font-size: 14pt;
 	}
 }
 /* ====================== Section - Familia ====================== */
