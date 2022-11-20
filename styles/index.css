@@ -1,0 +1,197 @@
+#intro_img {
+	width: 100vw;
+}
+
+#conocemas {
+	width: 80vw;
+	margin: 0 auto;
+	font-size: 18pt;
+	padding: 1em 0;
+	text-align: center;
+}
+
+#conocemas:hover {
+	transform: scale(1.1);
+}
+
+#conocemas img {
+	vertical-align: middle;
+	width: 1em;
+}
+
+#conocemas a{
+	color: var(--texto2);
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 32pt;
+	text-align: center;
+}
+@media(min-width:600px){h1{font-size: 40pt}}
+/* ====================== Section - Prensa ======================= */
+#article-container {
+	display: flex;
+	flex-direction: column;
+}
+.article:nth-child(even) {
+	background-color: black;
+	color: white;
+}
+.article {
+	text-align: center;
+	padding: 1em;
+	margin: 0 1em;
+	flex: 1;
+}
+.article img {
+	width: 80%;
+}
+.art-tit {
+	font-size: 18pt;
+	margin: 0.5em 0;
+}
+.article a{
+	display: block;
+	width: fit-content;
+	text-decoration: none;
+	font-size: 14pt;
+	color: white;
+	background-color: black;
+	margin: 0.5em auto;
+    padding: 0.5em 1em;
+    border: 4px solid var(--enfasis1);
+    border-radius: 22px;
+}
+.article a:hover {
+	color: black;
+	background-color: white;
+}
+@media(min-width:700px) {
+	#article-container {
+		flex-direction: row;
+		width: 75%;
+		margin: 0 auto;
+	}
+}
+/* ====================== Section - Familia ====================== */
+.fam-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	padding: 0 1em;
+}
+.fam-img {
+	max-width: 100%;
+	height: auto;
+	border:8px solid black;
+	border-radius: 50%;
+}
+.message {
+	color: white;
+	font-size: 14pt;
+	text-align: center;
+	max-width: 33em;
+	padding: 3em 2em;
+	background-image: url(/media/back2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.author {
+	font-size: 20pt;
+}
+.rol {
+	color: #848484;
+	font-size: 14pt;
+}
+.author, .rol {
+	padding-right: 2rem;
+	text-align: right;
+}
+.swiffy-slider{
+	--swiffy-slider-nav-light: black;
+}
+.slider-indicators>* {
+	background-color: black;
+}
+@media (min-width: 800px) {
+	.fam-container {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.fam-mes {
+		padding: 0 1em;
+	}
+	.message {
+		background-image: url(/media/back.png);
+		padding: 2em 1em 3em 1em;
+		font-size: 16pt;
+	}
+}
+/* ======================= Section - Ayuda ======================= */
+#ayuda {
+	margin: 1em;
+}
+#ayuda_flex {
+	display: flex;
+	flex-direction: column;
+}
+#ayuda_flex div {
+	flex: 50%;
+	font-size: 16pt;
+	line-height: 1.5rem;
+}
+#ayuda_flex a{
+	color: var(--enfasis1);
+	text-decoration: none;
+}
+form input[type=text], input[type=mail], textarea {
+	display: block;
+	background-color: var(--gris2);
+	color: var(--gris);
+	font: 16pt myFont;
+	border-radius: 5px;
+	border: none;
+	margin: 0.5em 0;
+	width: 100%;
+	padding: 5px;
+}
+input[type=submit] {
+	display: block;
+	font: 16pt myFont;
+	text-decoration: none;
+	background-color: black;
+	color: white;
+	margin: 0.5em auto;
+	padding: 0.5em 1em;
+	border: 4px solid var(--gris2);
+	border-radius: 22px;
+}
+input[type=submit]:hover {
+	background-color: var(--gris2);
+	color: black;
+	border-color: black;
+} 
+@media (min-width: 600px) {
+	#ayuda {
+			margin: 2em 10%;
+	}
+	#ayuda h1 {
+		text-align: left;
+	}
+	#ayuda_flex {
+		flex-direction: row;
+	} 
+	form input[type=text], input[type=mail], textarea, #radiobts {
+			margin: 0.5em auto;
+			width: 80%;
+	}
+}
+@media (min-width: 1000px) {
+	#ayuda_flex1 {
+		padding: 0 20px;
+	}
+	#ayuda h1 {
+		padding: 0 20px;
+	}
+}

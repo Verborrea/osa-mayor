@@ -9,6 +9,20 @@
 	--hover: #b3b3b3;
 	--enfasis1: #C58BFF;
 	--enfasis2: #484848;
+	--gris: #5C5C5C;
+	--gris2: #d9d9d9;
+}
+
+::-webkit-scrollbar {
+	width: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	box-sizing: border-box;
 }
 
 body {
@@ -16,9 +30,9 @@ body {
 	font-family: "Baby Doll", "myFont";
 }
 
-main {
+/* main {
 	margin: 0 1em;
-}
+} */
 
 h1 b{
 	color: var(--enfasis1);

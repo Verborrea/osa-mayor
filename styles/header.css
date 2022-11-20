@@ -1,7 +1,6 @@
 header {
 	background-image: url(../media/pattern.png);
 	background-color: black;
-	padding-bottom: 2em;
 }
 
 #logo {
@@ -34,21 +33,29 @@ header {
 }
 
 @media (min-width: 600px) {
+	header {
+		padding-bottom: 1em;
+	}
 	#ursa {
 		width: 52vw;
 		height: 29vw;
 	}
 	#logo img{
-		width: 80vh;
+		width: 500px;
 	}
 	#logo {
-		font-size: 16pt;
+		font-size: 20pt;
 		margin-bottom: 0;
 	}
 	#gif1, #gif2 {
 		display: inline;
 		width: 14vw;
 		margin: 0 5vw;
+	}
+}
+@media (min-width: 900px) {
+	#logo img{
+		width: 80vh;
 	}
 }
 
