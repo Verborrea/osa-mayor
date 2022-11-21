@@ -19,8 +19,8 @@ main {
 }
 
 .historytext div{
-    color: var(--gris);
-    font-weight: bold;
+    color: var(--enfasis2);
+    /* font-weight: bold; */
     font-size: 14pt;
 }
 

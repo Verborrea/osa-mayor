@@ -23,6 +23,7 @@
 h1 {
 	font-size: 32pt;
 	text-align: center;
+	margin: 1.5rem;
 }
 @media(min-width:600px){h1{font-size: 40pt}}
 /* ======================== Section - Intro ======================== */
@@ -91,7 +92,7 @@ h1 {
 .article {
 	text-align: center;
 	padding: 1em;
-	margin: 0 1em;
+	margin: 0 1.5em;
 	flex: 1;
 }
 .article img {
@@ -183,7 +184,7 @@ h1 {
 }
 /* ======================= Section - Ayuda ======================= */
 #ayuda {
-	margin: 1em;
+	margin: 2em;
 }
 #ayuda_flex {
 	display: flex;

@@ -47,6 +47,7 @@ footer {
 	text-align: center;
 	color: var(--hover);
 	font-size: 13pt;
+	padding: 2em 1em;
 }
 
 footer a img {
@@ -68,7 +69,6 @@ footer a img {
 
 footer #copyright{
 	margin: 0;
-	padding-bottom: 2em;
 }
 
 input[type=submit] {
