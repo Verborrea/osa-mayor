@@ -58,7 +58,7 @@ h1 {
 	color: var(--enfasis1);
 	text-align: right;
 }
-@media(min-width:900px){
+@media(min-width:1000px){
 	#introbox h1 {
 		background-color: unset;
 		padding: 0.5rem 0;
@@ -162,10 +162,10 @@ h1 {
 	text-align: right;
 }
 .swiffy-slider{
-	--swiffy-slider-nav-light: black;
+	--swiffy-slider-nav-light: black !important;
 }
 .slider-indicators>* {
-	background-color: black;
+	background-color: black !important;
 }
 @media (min-width: 800px) {
 	.fam-container {
@@ -198,7 +198,7 @@ h1 {
 	color: var(--enfasis1);
 	text-decoration: none;
 }
-form input[type=text], input[type=mail], textarea {
+form input[type=text], input[type=email], textarea {
 	display: block;
 	background-color: var(--gris2);
 	color: var(--gris);
@@ -209,22 +209,7 @@ form input[type=text], input[type=mail], textarea {
 	width: 100%;
 	padding: 5px;
 }
-input[type=submit] {
-	display: block;
-	font: 16pt myFont;
-	text-decoration: none;
-	background-color: black;
-	color: white;
-	margin: 0.5em auto;
-	padding: 0.5em 1em;
-	border: 4px solid var(--gris2);
-	border-radius: 22px;
-}
-input[type=submit]:hover {
-	background-color: var(--gris2);
-	color: black;
-	border-color: black;
-} 
+
 @media (min-width: 600px) {
 	#ayuda {
 			margin: 2em 10%;
@@ -235,7 +220,7 @@ input[type=submit]:hover {
 	#ayuda_flex {
 		flex-direction: row;
 	} 
-	form input[type=text], input[type=mail], textarea, #radiobts {
+	form input[type=text], input[type=email], textarea, #radiobts {
 			margin: 0.5em auto;
 			width: 80%;
 	}

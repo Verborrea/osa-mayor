@@ -1,0 +1,133 @@
+header {
+    padding-bottom: 1em;
+}
+
+main {
+    margin: 1.5em;
+}
+
+p {
+    font-size: 14pt;
+}
+
+#image-container img {
+    display: block;
+    height: 400px;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+#hab-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.img {
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 50px;
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.text {
+    font-size: 20pt;
+    text-align: center;
+}
+
+.img::after {
+    font-size: 14pt;
+    color: white;
+    background-color: #7d7d7d80;
+    position: absolute;
+    inset: 0;
+    display: grid;
+    place-items: center;
+    text-align: center;
+    transition: transform .3s;
+    border-radius: 50%;
+    padding: 2em;
+}
+
+#hab1 {background-image: url(../media/imgs/hab1.jpg);}
+#hab2 {background-image: url(../media/imgs/hab2.jpg);}
+#hab3 {background-image: url(../media/imgs/hab3.jpg);}
+#hab4 {background-image: url(../media/imgs/hab4.jpg);}
+#hab5 {background-image: url(../media/imgs/hab5.jpg);}
+
+#hab1::after {content: "Porque nos preocupamos por los demás.";}
+#hab2::after {content: "Damos a cada uno lo que necesita.";}
+#hab3::after {content: "Buscamos soluciones sostenibles.";}
+#hab4::after {content: "Somos transparentes en el manejo de donaciones."}
+#hab5::after {content: "Queremos seguir cada caso como si fuera el único y cuidadosos  de que cada caso se concrete.";}
+
+@media (min-width: 600px)  {
+    #image-container img {
+        object-fit: scale-down;
+        display: block;
+        height: auto;
+        width: 100%;
+    }
+    .img::after {
+        transform: translateY(100%);
+    }
+    .img:hover::after {
+        transform: translateY(0);
+    }
+    main {
+        width: 70%;
+        margin: 0 auto;
+    }
+}
+
+#cons-container {
+    display: flex;
+    flex-direction: column;
+}
+
+#cons-container div{
+    flex: 1;
+}
+
+@media (min-width: 800px)  {
+    #cons-container {
+        display: flex;
+        flex-direction: row;
+    }
+    #cons-container div:nth-child(1) {
+        margin-right: 2em;
+    }
+    #cons-container div:nth-child(2) {
+        margin-left: 2em;
+        margin-top: 2em;
+    }
+}
+
+input[type=text], input[type=email], input[type=date], textarea, select, input[type=tel] {
+	display: block;
+	background-color: var(--gris2);
+	color: var(--gris);
+	font: 16pt myFont;
+	border-radius: 5px;
+	border: none;
+	margin: 0.5em 0;
+	width: 100%;
+	padding: 5px;
+}
+select, input[type=tel] {
+	margin: 0;
+    width: 80%;
+}
+select { flex: 1;}
+input[type=tel] {
+    flex: 3;
+    margin-left: 0.5em;
+}

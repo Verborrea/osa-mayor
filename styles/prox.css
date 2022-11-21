@@ -1,0 +1,50 @@
+header {
+    padding-bottom: 1em;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container > div{
+    margin: 0 2em;
+}
+
+.container img{
+    display:block;
+    width: 100%;
+    margin: 2em auto;
+}
+
+.manticon{
+	flex: 1;
+}
+
+.manttext{
+	flex: 1;
+    color: var(--gris);
+}
+
+main a{
+    display: block;
+    text-decoration: none;
+    color: var(--enfasis1);
+    font-size: 20pt;
+    font-weight: bold;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+@media (min-width: 800px) {
+    .container {
+        display: flex;
+        flex-direction: row;
+    }
+    .container img{
+        display:block;
+        width: auto;
+        margin: 2em auto;
+    }
+}
