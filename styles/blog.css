@@ -12,8 +12,6 @@ main {
     display: block;
 }
 
-/* media */
-
 .floating-icon-container {
     display: flex;
     flex-direction: row;
@@ -31,9 +29,9 @@ main {
 }
 
 #articulo {
-    border-left: thick solid black;
     padding-left: 1em;
-    color: var(--enfasis2);
+    color: var(--gris);
+    padding: 0 1.5em;
 }
 
 #categoria {
@@ -57,12 +55,58 @@ main {
 }
 
 #content img{
-    width: 90%;
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+#mas-contenido a{
+    display: block;
+    text-decoration: none;
+    color: var(--enfasis1);
+    font-size: 18pt;
+    text-align: center;
+    width: fit-content;
+    margin: 0 auto;
+}
+#mas-contenido{
+    transition: transform 0.5s ease-in-out;
+    width: fit-content;
+    margin: 0 auto;
+}
+#mas-contenido:hover {
+    transform: scale(1.1);
+}
+#mas-contenido img{
+    display: block;
+    width: fit-content;
+    margin: 1em auto;
+}
+
+.otro {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: black;
+}
+.thumbnail {
+    padding: 0 1.5em;
+}
+.otro-info {
+    padding: 1.5em;
+}
+.otro-cat {color: var(--enfasis1);}
+.otro-tit {font-size: 20pt;}
+.otro-aut {padding: 0.5rem 0;}
+.otro-res {
+    color: var(--gris);
+    font-size: 14pt;
 }
 
 @media (min-width: 600px) {
     .container {
         flex-direction: row;
+        margin: 3em 0;
     }
     #media-box {
         padding: 0;
@@ -88,6 +132,7 @@ main {
     }
     #articulo {
         flex: 3;
+        border-left: thick solid black;
     }
     #space {
         flex: 2.5;
@@ -96,5 +141,42 @@ main {
         width: 90%;
         display: block;
         margin: 0 auto;
+    }
+    #mas-contenido a{
+        font-size: 24pt;
+    }
+    .otro {
+        flex-direction: row;
+        margin: 1.5em 0;
+    }
+    .thumbnail{
+        object-fit: contain;
+        width: 50%;
+    }
+    .otro-info {
+        padding: 0 1.5em;
+    }
+    #otrosarticulos-container {
+        margin: 3em auto;
+    }
+}
+
+@media (min-width: 1000px){
+    #otrosarticulos-container {
+        display: flex;
+        flex-wrap: wrap;
+        width: 70%;
+        margin: 3em auto;
+    }
+    .otro-info{
+        flex: 1;
+        width: 22em;
+        padding: 0 1.5em;
+    }
+    .otro {
+        width: 50%;
+    }
+    .thumbnail{
+        padding: 0;
     }
 }
