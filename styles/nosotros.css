@@ -7,7 +7,8 @@ main {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: center
+    align-items: center;
+    font-family: 'blogFont';
 }
 
 .historytext, .historyimg {
@@ -21,7 +22,7 @@ main {
 .historytext div{
     color: var(--enfasis2);
     /* font-weight: bold; */
-    font-size: 14pt;
+    font-size: 15pt;
 }
 
 .historytext div i{

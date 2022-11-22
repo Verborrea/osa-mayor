@@ -3,6 +3,12 @@
 	src: url('../media/babydoll.woff') format('woff');
 }
 
+@font-face {
+	font-family: "blogFont";
+	src: url('../media/supernettcn.woff') format('woff');
+}
+
+
 :root {
 	--texto1: #000000;
 	--texto2: #FFFFFF;
