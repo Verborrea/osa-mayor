@@ -1,6 +1,7 @@
 header {
 	background-image: url(../media/pattern.png);
 	background-color: black;
+	padding-bottom: 2em;
 }
 
 #logo {

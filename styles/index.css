@@ -21,9 +21,12 @@
 }
 
 h1 {
-	font-size: 32pt;
+	font-size: 30pt;
 	text-align: center;
 	margin: 1.5rem;
+}
+header {
+	padding-bottom: 0 !important;
 }
 @media(min-width:600px){h1{font-size: 40pt}}
 /* ======================== Section - Intro ======================== */
@@ -210,10 +213,13 @@ form input[type=text], input[type=email], textarea {
 	width: 100%;
 	padding: 5px;
 }
+#ayuda h1 {
+	margin: 1.5rem 0;
+}
 
 @media (min-width: 600px) {
 	#ayuda {
-			margin: 2em 10%;
+		margin: 2em 10%;
 	}
 	#ayuda h1 {
 		text-align: left;

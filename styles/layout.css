@@ -1,14 +1,11 @@
 @font-face {
 	font-family: "myFont";
-	src: url('../media/babydoll.woff') format('woff');
+	src: url('../media/fonts/babydoll.woff') format('woff');
 }
-
 @font-face {
 	font-family: "blogFont";
-	src: url('../media/supernettcn.woff') format('woff');
+	src: url('../media/fonts/supernettcn.woff') format('woff');
 }
-
-
 :root {
 	--texto1: #000000;
 	--texto2: #FFFFFF;
@@ -18,36 +15,25 @@
 	--gris: #5C5C5C;
 	--gris2: #d9d9d9;
 }
-
 ::-webkit-scrollbar {
 	width: 0;
 }
-
 html {
 	scroll-behavior: smooth;
 }
-
 * {
 	box-sizing: border-box;
 }
-
 body {
 	margin: 0;
 	font-family: "Baby Doll", "myFont";
 }
-
-/* main {
-	margin: 0 1em;
-} */
-
 h1 b{
 	color: var(--enfasis1);
 }
-
 main p {
 	color: var(--enfasis2);
 }
-
 footer {
 	background-image: url(../media/pattern.png);
 	text-align: center;
@@ -55,28 +41,22 @@ footer {
 	font-size: 13pt;
 	padding: 2em 1em;
 }
-
 footer a img {
     margin: 0 1em;
 }
-
 #footer_navbar a{
 	text-decoration: none;
 	color: var(--texto2);
 }
-
 #footer_navbar a:hover{
 	color: var(--hover);
 }
-
 #footer_navbar {
 	padding: 1em 0;
 }
-
 footer #copyright{
 	margin: 0;
 }
-
 input[type=submit] {
 	display: block;
 	font: 16pt myFont;
@@ -93,7 +73,6 @@ input[type=submit]:hover {
 	color: black;
 	border-color: black;
 } 
-
 @media (min-width: 600px) {
 	.social_media {
 		height: 35px;
