@@ -14,21 +14,23 @@ p {
     object-position: center;
 }
 
+#inicio-container {
+    padding: 1.5em 0;
+}
+
 #hab-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
 }
 
 .img {
     width: 300px;
     height: 300px;
-    margin: 0 auto;
-    margin-top: 50px;
     background-size: cover;
     background-position: center;
-
+    margin: 50px 30px 10px;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -87,6 +89,7 @@ p {
 #cons-container {
     display: flex;
     flex-direction: column;
+    margin: 5em 0 3em 0;
 }
 
 #cons-container div{
@@ -107,6 +110,11 @@ p {
     }
 }
 
+label {
+    font-size: 10pt;
+    font-weight: bold;
+}
+
 input[type=text], input[type=email], input[type=date], textarea, select, input[type=tel] {
 	display: block;
 	background-color: var(--gris2);
@@ -114,16 +122,15 @@ input[type=text], input[type=email], input[type=date], textarea, select, input[t
 	font: 16pt myFont;
 	border-radius: 5px;
 	border: none;
-	margin: 0.5em 0;
 	width: 100%;
 	padding: 5px;
 }
-select, input[type=tel] {
-	margin: 0;
-    width: 80%;
+
+#mid-form {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
-select { flex: 1;}
-input[type=tel] {
-    flex: 3;
-    margin-left: 0.5em;
-}
+
+#span-sex {flex-basis: 30%;}
+#span-num {flex-basis: 65%;}

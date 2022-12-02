@@ -52,10 +52,12 @@
 			<img src="media/imgs/volun.jpg">
 		</div>
 		<main>
-			<h1>¿Qué significa <b>trabajar</b> con nosotros?</h1>
-			<p>
-				El Perú es un país que carece de cultura familiar, la mayoría de personas no consideran a los niños como personas para cuidar sino más bien para lucrar. Es por eso que en Agustina y la Osa Mayor buscamos a gente que sea:
-			</p>
+			<div id="inicio-container">
+				<h1>¿Qué significa <b>trabajar</b> con nosotros?</h1>
+				<p>
+					El Perú es un país que carece de cultura familiar, la mayoría de personas no consideran a los niños como personas a las cuales hay que cuidar sino más bien son vistos como medios para lucrar. En Agustina y la Osa mayor no pensamos igual y es por eso que buscamos a gente que sea:
+				</p>
+			</div>
 			<div id="hab-container">
 				<div>
 					<div class="img" id="hab1"></div>
@@ -90,19 +92,30 @@
 				</div>
 				<div>
 					<form>
+						<label>Nombre Completo</label>
 						<input type="text" placeholder="Nombre Completo">
+						<label>Fecha de Nacimiento</label>
 						<input type="date" placeholder="Fecha de Nacimiento">
+						<label>Correo Electrónico</label>
 						<input type="email" placeholder="Correo Electrónico">
+						<label>Profesión u ocupación</label>
 						<input type="text" placeholder="Profesión u ocupación">
-						<div style="display: flex;">
-							<select id="sexo" name="sexo">
-								<option value="-" selected>Sexo</option>
-								<option value="Masculino">Masculino</option>
-								<option value="Femenino">Femenino</option>
-								<option value="otro">Otro</option>
-							</select>
-							<input type="tel" placeholder="Número de contacto">
+						<div id="mid-form">
+							<span id="span-sex">
+								<label>Sexo</label>
+								<select id="sexo" name="sexo">
+									<option value="-" selected>Sexo</option>
+									<option value="Masculino">Masculino</option>
+									<option value="Femenino">Femenino</option>
+									<option value="otro">Otro</option>
+								</select>
+							</span>
+							<span id="span-num">
+								<label>Número de contacto</label>
+								<input type="tel" placeholder="Número de contacto">
+							</span>
 						</div>
+						<label>Cuentanos un poco sobre tí</label>
 						<textarea rows="4" placeholder="Cuentanos un poco sobre tí"></textarea>
 						<input type="submit" value="Enviar Solicitud">
 					</form>

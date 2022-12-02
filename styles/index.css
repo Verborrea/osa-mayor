@@ -28,13 +28,20 @@ h1 {
 header {
 	padding-bottom: 0 !important;
 }
+
+section {
+	padding: 2em 0;
+}
+
 @media(min-width:600px){h1{font-size: 40pt}}
 /* ======================== Section - Intro ======================== */
 #intro_img {
 	width: 100vw;
+	display: block;
 }
 #intro {
 	position: relative;
+	padding-top: 0 !important;
 }
 #introbox {
 	position: relative;
@@ -171,6 +178,9 @@ header {
 .slider-indicators>* {
 	background-color: black !important;
 }
+.slider-nav::before {
+	padding: 0 !important;
+}
 @media (min-width: 800px) {
 	.fam-container {
 		flex-direction: row;
@@ -187,7 +197,7 @@ header {
 }
 /* ======================= Section - Ayuda ======================= */
 #ayuda {
-	margin: 2em;
+	margin: 0 2em 2em 2em;
 }
 #ayuda_flex {
 	display: flex;
@@ -219,7 +229,7 @@ form input[type=text], input[type=email], textarea {
 
 @media (min-width: 600px) {
 	#ayuda {
-		margin: 2em 10%;
+		margin: 0 10% 2em 10%;
 	}
 	#ayuda h1 {
 		text-align: left;
