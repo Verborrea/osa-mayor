@@ -1,25 +1,28 @@
+main {
+    padding: 5em 0;
+}
+
 .container {
     display: flex;
+    width: 75%;
+    margin: 0 auto 5rem;
     flex-direction: column;
+    justify-content: space-between;
     align-items: center;
 }
 
 .container > div{
-    margin: 0 2em;
+    flex-basis: 45%;
 }
 
 .container img{
-    display:block;
+    display: block;
     width: 100%;
     margin: 2em auto;
+    padding: 1.5em;
 }
 
-.manticon{
-	flex: 1;
-}
-
-.manttext{
-	flex: 1;
+.mant-text{
     color: var(--gris);
 }
 
@@ -30,8 +33,9 @@ main a{
     font-size: 20pt;
     font-weight: bold;
     text-align: center;
-    padding-bottom: 1em;
 }
+
+main a:hover{transform: scale(1.2);}
 
 @media (min-width: 800px) {
     .container {
@@ -40,7 +44,9 @@ main a{
     }
     .container img{
         display:block;
-        width: auto;
-        margin: 2em auto;
+        margin: auto;
+    }
+    main a {
+        font-size: 32pt;
     }
 }

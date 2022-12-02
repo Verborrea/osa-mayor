@@ -43,7 +43,7 @@ p {
 
 .img::after {
     font-size: 14pt;
-    color: white;
+    color: var(--white);
     background-color: #7d7d7d80;
     position: absolute;
     inset: 0;

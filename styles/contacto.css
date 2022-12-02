@@ -17,10 +17,12 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    margin: 4rem 0 ;
 }
 
 #cons-container div{
-    flex: 1;
+    flex-basis:45%;
 }
 
 #contact-image img{
@@ -39,32 +41,53 @@ input[type=text], input[type=email], textarea {
 	padding: 5px;
 }
 
+#contacto {
+    margin: 4em 0;
+}
+
+#contacto h1{
+    font-size: 2em;
+}
+
+#datos {
+    columns: 3 320px;
+    column-gap: 0.5em;
+    column-fill: balance;
+}
+
 .dato {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin: 0.5em 0;
     font: 18pt 'blogFont';
+    padding: 10px 0;
 }
 
+.dato span{
+    background: black;
+    border-radius: 50%;
+}
+.dato span img{
+    display: block;
+    padding: 10px;
+}
 .dato > div{
-    margin: 0 1em;
+    margin-left: 1em;
+}
+
+#datos a {
+    display: block;
+    text-decoration: none;
+    color: var(--black);
+}
+
+#datos a:hover {
+    transform: scale(1.1);
 }
 
 @media (min-width: 800px)  {
     #cons-container {
         display: flex;
         flex-direction: row;
-    }
-    #cons-container div:nth-child(1) {
-        margin-right: 2em;
-    }
-    #cons-container div:nth-child(2) {
-        margin-left: 2em;
-        margin-top: 2em;
-    }
-    .dato {
-        margin: 0 0.5em 0.5em 40%;
-        font-size: 20pt;
     }
 }
