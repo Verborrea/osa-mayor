@@ -4,12 +4,17 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<title>Agustina y la Osa Mayor</title>
-
+		<title>Agustina y la Osa Mayor | Contacto</title>
+		<link rel="apple-touch-icon" sizes="180x180" href="fav/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="fav/favicon-16x16.png">
+		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
+		<link rel="manifest" href="fav/site.webmanifest">
 		<link href="styles/layout.css" rel="stylesheet">
 		<link href="styles/contacto.css" rel="stylesheet">
 		<link href="styles/star_sizes.css" rel="stylesheet">
 		<link href="styles/header.css" rel="stylesheet">
+		<script type="text/javascript" src="scripts/myform.js"></script>
 	</head>
 
 	<body>
@@ -59,9 +64,12 @@
 						Si deseas comunicarte con nosotros, puedes hacerlo en este formulario o a través de nuestras redes sociales.
 					</p>
 					<form>
-						<input type="text" placeholder="Nombre Completo">
-						<input type="email" placeholder="Correo Electrónico">
-						<textarea rows="10" placeholder="Dejanos tu mensaje aquí"></textarea>
+						<label id="name-l">Nombre Completo</label>
+						<input id="name" type="text" placeholder="Nombre Completo" required>
+						<label id="mail-l">Correo Electrónico</label>
+						<input id="mail" type="email" placeholder="Correo Electrónico" required>
+						<label id="msg-l">Mensaje</label>
+						<textarea id="msg" rows="10" placeholder="Dejanos tu mensaje aquí" required></textarea>
 						<input type="submit" value="Enviar Solicitud">
 					</form>
 				</div>

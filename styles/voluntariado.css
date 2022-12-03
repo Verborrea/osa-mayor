@@ -14,6 +14,20 @@ p {
     object-position: center;
 }
 
+#intro-box {
+    position: absolute;
+    font: 45pt"blogFont";
+    color: white;
+    background-color: #000000b5;
+    padding: 0.25em 0.5em;
+    left: 0;
+    right: 0;
+    text-align: center;
+    vertical-align: middle;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
 #inicio-container {
     padding: 1.5em 0;
 }
@@ -30,7 +44,7 @@ p {
     height: 300px;
     background-size: cover;
     background-position: center;
-    margin: 50px 30px 10px;
+    margin: 50px 15px 10px;
     position: relative;
     border-radius: 50%;
     overflow: hidden;
@@ -113,7 +127,10 @@ p {
 label {
     font-size: 10pt;
     font-weight: bold;
+    color: var(--white);
 }
+
+#date-l {color:var(--black)}
 
 input[type=text], input[type=email], input[type=date], textarea, select, input[type=tel] {
 	display: block;

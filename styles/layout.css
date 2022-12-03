@@ -46,7 +46,7 @@ footer a img {
 }
 #footer_navbar a{
 	text-decoration: none;
-	color: var(--texto2);
+	color: var(--white);
 }
 #footer_navbar a:hover{
 	color: var(--hover);

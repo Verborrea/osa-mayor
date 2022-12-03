@@ -33,6 +33,21 @@ header {
 	margin: auto;
 }
 
+#admin-header {
+	margin: 0 auto;
+}
+
+#admin-header a {
+	text-decoration: none;
+	font-size: 14pt;
+	padding: 1em;
+	color: var(--white);
+}
+
+#admin-header .active {
+	color: var(--enfasis1);
+}
+
 @media (min-width: 600px) {
 	header {
 		padding-bottom: 1em;
