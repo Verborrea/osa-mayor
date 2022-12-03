@@ -37,6 +37,12 @@ main {
     color: white;
 }
 
+.otro:nth-child(4n+2), .otro:nth-child(4n+3) {
+    background-color: white;
+}
+
+a.otro:hover {transform: scale(1.05);}
+
 .thumbnail {
     padding: 0 1.5em;
 }

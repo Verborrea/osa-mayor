@@ -13,19 +13,20 @@ p {
     object-fit: cover;
     object-position: center;
 }
-
-#intro-box {
+#intro {position: relative;}
+#introbox {
     position: absolute;
-    font: 45pt"blogFont";
+    background-color: #00000087;
     color: white;
-    background-color: #000000b5;
-    padding: 0.25em 0.5em;
-    left: 0;
-    right: 0;
     text-align: center;
-    vertical-align: middle;
-    top: 50%;
-    transform: translateY(-50%);
+    margin: auto;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    height: fit-content;
+    padding: 0.5em 1em;
+    font: 300% blogFont;
 }
 
 #inicio-container {

@@ -8,5 +8,8 @@ window.onload = function(){
 function muestraAlerta(evento) {
 	let orginial_id = evento.target.id;
 	let label = document.getElementById(orginial_id + "-l");
-	label.style.color="black";
+	if (evento.target.value == "")
+		label.style.color="white";
+	else
+		label.style.color="black";
 }

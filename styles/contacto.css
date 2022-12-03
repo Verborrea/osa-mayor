@@ -40,7 +40,11 @@ input[type=text], input[type=email], textarea {
 	padding: 5px;
 }
 
-label {color: var(--white);}
+label {
+    font-size: 10pt;
+    font-weight: bold;
+    color: var(--white);
+}
 
 #contacto {
     margin: 4em 0;
