@@ -218,6 +218,11 @@ section {
 	color: var(--enfasis1);
 	text-decoration: none;
 }
+form>label {
+    font-size: 10pt;
+    font-weight: bold;
+    color: var(--white);
+}
 form input[type=text], input[type=email], textarea {
 	display: block;
 	background-color: var(--gris2);
@@ -225,7 +230,6 @@ form input[type=text], input[type=email], textarea {
 	font: 16pt myFont;
 	border-radius: 5px;
 	border: none;
-	margin: 0.5em 0;
 	width: 100%;
 	padding: 5px;
 }
@@ -243,7 +247,7 @@ form input[type=text], input[type=email], textarea {
 	#ayuda_flex {
 		flex-direction: row;
 	} 
-	form input[type=text], input[type=email], textarea, #radiobts {
-			margin: 0.5em auto;
+	#radiobts {
+		margin: 0.5em auto;
 	}
 }
