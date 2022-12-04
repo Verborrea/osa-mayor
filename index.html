@@ -188,20 +188,20 @@
 						<a href="voluntariado.html#image-container">Inscribete como voluntario aquí-></a>
 					</div>
 					<div id="ayuda_flex2">
-						<form>
+						<form action="formAyuda.php" method="post">
 							<label id="name-l">Nombre o Razón Social</label>
-							<input id="name" type="text" placeholder="Nombre o Razón Social" required>
+							<input id="name" name="nombre" type="text" placeholder="Nombre o Razón Social" required>
 							<label id="correo-l">Correo Electrónico</label>
-							<input id="correo" type="email" placeholder="Correo Electrónico" required>
+							<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required>
 							<label id="msg-l">¿Por qué?</label>
-							<textarea id="msg" rows="4" placeholder="¿Por qué?" required></textarea>
+							<textarea id="msg" name="razon" rows="4" placeholder="¿Por qué?" required></textarea>
 							<div id="radiobts" style="display: flex;">
 								<span style="flex-basis: 50%;">
-									<input type="radio" id="rb1" name="tipo_ayuda" value="recibir">
+									<input type="radio" id="rb1" name="tipo_ayuda" value="0">
 									<label for="rb1">Necesito ayuda</label>
 								</span>
 								<span style="flex-basis: 50%;">
-									<input type="radio" id="rb2" name="tipo_ayuda" value="dar">
+									<input type="radio" id="rb2" name="tipo_ayuda" value="1">
 									<label for="rb2">Quiero ayudar</label>
 								</span>
 							</div>

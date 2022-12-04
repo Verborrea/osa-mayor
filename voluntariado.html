@@ -104,15 +104,15 @@
 					</p>
 				</div>
 				<div>
-					<form name="voluntariado">
+					<form action="formVoluntariado.php" method="post">
 						<label id="name-l">Nombre Completo</label>
-						<input id="name" type="text" placeholder="Nombre Completo" required>
+						<input id="name" name="name" type="text" placeholder="Nombre Completo" required>
 						<label id="date-l">Fecha de Nacimiento</label>
-						<input id="date" type="date" placeholder="Fecha de Nacimiento" required>
+						<input id="date" name="date" type="date" placeholder="Fecha de Nacimiento" required>
 						<label id="correo-l">Correo Electrónico</label>
-						<input id="correo" type="email" placeholder="Correo Electrónico" required>
+						<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required>
 						<label id="prof-l">Profesión u ocupación</label>
-						<input id="prof" type="text" placeholder="Profesión u ocupación" required>
+						<input id="prof" name="prof" type="text" placeholder="Profesión u ocupación" required>
 						<div id="mid-form">
 							<span id="span-sex">
 								<label id="sexo-l">Sexo</label>
@@ -125,11 +125,11 @@
 							</span>
 							<span id="span-num">
 								<label id="numero-l">Número de contacto</label>
-								<input id="numero" type="tel" placeholder="Número de contacto" required>
+								<input id="numero" name="numero" type="tel" placeholder="Número de contacto" required>
 							</span>
 						</div>
 						<label id="resumen-l">Cuentanos un poco sobre tí</label>
-						<textarea id="resumen" rows="4" placeholder="Cuentanos un poco sobre tí" required minlength="50"></textarea>
+						<textarea id="resumen" name="resumen" ows="4" placeholder="Cuentanos un poco sobre tí" required minlength="50"></textarea>
 						<input type="submit" value="Enviar Solicitud">
 					</form>
 				</div>
