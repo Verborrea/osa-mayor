@@ -44,6 +44,10 @@ header {
 	color: var(--white);
 }
 
+#admin-header a:hover {
+	color: var(--hover);
+}
+
 #admin-header .active {
 	color: var(--enfasis1);
 }
