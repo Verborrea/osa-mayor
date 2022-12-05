@@ -58,16 +58,13 @@
 				<a class="b_button" href="blog.html">Articulos</a>
 			</div>
             <div class="gallery">
-                <img src="gallery/IMG_0171.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0175.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0183.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0212.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0224.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0240.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0250.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0255.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0261.jpg" alt="Chocolatada">
-                <img src="gallery/IMG_0265.jpg" alt="Chocolatada">
+            <?php
+                $files = glob("gallery/*.*");
+                for ($i = 0; $i < count($files); $i++) {
+                    $image = $files[$i];
+                    echo '<img src="' . $image . '" alt="Imagen" />' . "<br /><br />";
+                }
+            ?>
             </div>
 		</main>
 		<footer>

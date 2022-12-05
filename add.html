@@ -36,16 +36,28 @@
 		</header>
 		<main>
 			<div id="container">
-				<div id="form-container" class="container">
+				<div id="form-container" class="container" method="post">
 					<form id="entry-form" onsubmit="mysuperfunction()">
-						<input accept="image/*" type='file' id="imgInp" />
-						<img id="portada-preview" src="media/imgs/article.png" alt="your image" />
-						<label for="cat">Categoria: </label>
-						<input type="text" name="cat">
-						<label for="cat">Título: </label>
-						<input type="text" name="cat">
-						<label for="cat">Autor: </label>
-						<input type="text" name="cat">
+						<div style="display: flex;">
+							<div>
+								<input accept="image/*" type='file' id="imgInp" />
+								<img id="portada-preview" src="media/imgs/article.png" alt="your image" />	
+							</div>
+							<div>
+								<div>
+									<label for="cat">Categoria: </label>
+									<input type="text" name="cat">
+								</div>
+								<div>
+									<label for="tit">Título: </label>
+									<input type="text" name="tit">
+								</div>
+								<div>
+									<label for="auth">Autor: </label>
+									<input type="text" name="auth">
+								</div>
+							</div>
+						</div>
 						<div id="editor">
 							<p>Hello World!</p>
 							<p>Some initial <strong>bold</strong> text</p>
@@ -55,28 +67,28 @@
 						<script>
 							//text editor code
 							var quill = new Quill('#editor', {
-							modules: {
-								toolbar: [
-									['bold', 'italic'],
-									['link', 'blockquote', 'code-block', 'image'],
-									[{ list: 'ordered' }, { list: 'bullet' }]
-								]
-							},
-							placeholder: 'Compose an epic...',
-							theme: 'snow'
-						});
-						//change image code
-						imgInp.onchange = evt => {
-							const [file] = imgInp.files
-							if (file) {
-								document.getElementById("portada-preview").src = URL.createObjectURL(file)
+								modules: {
+									toolbar: [
+										['bold', 'italic'],
+										['link', 'blockquote', 'code-block', 'image'],
+										[{ list: 'ordered' }, { list: 'bullet' }]
+									]
+								},
+								placeholder: 'Compose an epic...',
+								theme: 'snow'
+							});
+							//change image code
+							imgInp.onchange = evt => {
+								const [file] = imgInp.files
+								if (file) {
+									document.getElementById("portada-preview").src = URL.createObjectURL(file)
+								}
 							}
-						}
 						</script>
 					</form>
 				</div>
 				<div id="btn-form-container">
-					<label id="submit-l" form="entry-form" for="mysubmit">Añadir</label>              
+					<label id="submit-l" form="entry-form" for="mysubmit">Añadir</label>
 					<a href="edit.html">Regresar</a>
 				</div>
 			</div>

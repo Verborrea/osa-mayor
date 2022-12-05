@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <hmtl>
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,10 @@
 		<link rel="manifest" href="fav/site.webmanifest">
 		<link href="styles/layout.css" rel="stylesheet">
 		<link href="styles/header.css" rel="stylesheet">
-		<link href="styles/form.css" rel="stylesheet">
+		<link href="styles/forms.css" rel="stylesheet">
+		<link href="styles/upload.css" rel="stylesheet">
 	</head>
+
 	<body>
 		<header>
 			<div id="logo">
@@ -31,12 +34,15 @@
 			</div>
 		</header>
 		<main>
-			<form>
-				<label for="avatar">Imagen para subir</label>
-				<input type="file"
-					id="avatar" name="avatar"
-					accept="image/png, image/jpeg">
-			</form>
+			<div id="drop-area">
+				<form class="my-form">
+					<p>Arrastre las imagenes o use el botón de Seleccionar Archivos para subir las imagenes</p>
+                    <p>Una vez pueda visualizarlas, ya estarán subidas a la galería.</p>
+					<input type="file" id="fileToUpload" multiple accept="image/*" onchange="handleFiles(this.files)">
+					<!-- <label class="button" for="fileToUpload">Seleccionar Archivos</label> -->
+				</form>
+				<div id="gallery"></div>
+			</div>
 		</main>
 		<footer>
 			<img src="media/oso.png" alt="Logotipo Oso">
@@ -58,3 +64,68 @@
 		</footer>
 	</body>
 </hmtl>
+<script>
+// ************************ Drag and drop ***************** //
+let dropArea = document.getElementById("drop-area")
+
+// Prevent default drag behaviors
+;['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, preventDefaults, false)   
+  document.body.addEventListener(eventName, preventDefaults, false)
+})
+
+// Highlight drop area when item is dragged over it
+;['dragenter', 'dragover'].forEach(eventName => {
+  dropArea.addEventListener(eventName, highlight, false)
+})
+
+;['dragleave', 'drop'].forEach(eventName => {
+  dropArea.addEventListener(eventName, unhighlight, false)
+})
+
+// Handle dropped files
+dropArea.addEventListener('drop', handleDrop, false)
+
+function preventDefaults (e) {
+  e.preventDefault()
+  e.stopPropagation()
+}
+
+function highlight(e) {
+  dropArea.classList.add('highlight')
+}
+
+function unhighlight(e) {
+  dropArea.classList.remove('active')
+}
+
+function handleDrop(e) {
+  var dt = e.dataTransfer
+  var files = dt.files
+
+  handleFiles(files)
+}
+
+function handleFiles(files) {
+  files = [...files]
+  files.forEach(uploadFile)
+  files.forEach(previewFile)
+}
+
+function previewFile(file) {
+  let reader = new FileReader()
+  reader.readAsDataURL(file)
+  reader.onloadend = function() {
+    let img = document.createElement('img')
+    img.src = reader.result
+    document.getElementById('gallery').appendChild(img)
+  }
+}
+
+function uploadFile(file, i) {
+    let formData = new FormData();
+     
+    formData.append("fileToUpload", file);
+    fetch('upload.php', {method: "POST", body: formData});
+}
+</script>
