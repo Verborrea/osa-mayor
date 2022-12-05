@@ -1,0 +1,28 @@
+#btn-form-container>a, #submit-l {
+    display: block;
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--black);
+    width: fit-content;
+    margin: 1em;
+    border-radius: 15px;
+    padding: 1em;
+}
+
+#btn-form-container {
+    display: flex;
+    justify-content: center;
+}
+
+#btn-form-container>a:hover, #submit-l:hover {
+    background-color: var(--hover);
+}
+
+form>input {
+    display: block;
+}
+
+#portada-preview {
+    display: block;
+    width: 300px;
+}

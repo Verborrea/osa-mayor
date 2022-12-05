@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <hmtl>
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,8 +12,9 @@
 		<link rel="manifest" href="fav/site.webmanifest">
 		<link href="styles/layout.css" rel="stylesheet">
 		<link href="styles/header.css" rel="stylesheet">
-		<link href="styles/solicitudes.css" rel="stylesheet">
+		<link href="styles/forms.css" rel="stylesheet">
 	</head>
+
 	<body>
 		<header>
 			<div id="logo">
@@ -22,15 +24,55 @@
 			</div>
 			<div id="sky">
 				<div id="admin-header">
-					<a href="admin.html">Solicitudes</a>
+					<a href="admin.php?tipo=Ayuda">Ayuda</a>
+					<a href="admin.php?tipo=Voluntariado">Voluntariado</a>
+					<a href="admin.php?tipo=Contacto">Contacto</a>
 					<a href="edit.html" class="active">Editar entradas</a>
 					<a href="upload.html">Galería</a>
-					<a href="contacto.html">Contacto</a>
 				</div>
 			</div>
 		</header>
 		<main>
-			Hola
+			<div id="container">
+				<table>
+					<tr>
+						<th>Categoria</th>
+						<th>Nombre</th>
+						<th>Fecha</th>
+						<th>Editar</th>
+						<th>Eliminar</th>
+					</tr>
+					<tr>
+						<td>Eventos</td>
+						<td>Marcha por los peluches</td>
+						<td>02-12-2022</td>
+						<td><a href="add.html">Editar</a></td>
+						<td><a href="#">Eliminar</a></td>
+					</tr>
+					<tr>
+						<td>Eventos</td>
+						<td>Marcha por los peluches</td>
+						<td>02-12-2022</td>
+						<td><a href="add.html">Editar</a></td>
+						<td><a href="#">Eliminar</a></td>
+					</tr>
+					<tr>
+						<td>Eventos</td>
+						<td>Marcha por los peluches</td>
+						<td>02-12-2022</td>
+						<td><a href="add.html">Editar</a></td>
+						<td><a href="#">Eliminar</a></td>
+					</tr>
+					<tr>
+						<td>Eventos</td>
+						<td>Marcha por los peluches</td>
+						<td>02-12-2022</td>
+						<td><a href="add.html">Editar</a></td>
+						<td><a href="#">Eliminar</a></td>
+					</tr>
+				</table>
+				<a href="add.html">Añadir entrada</a>
+			</div>
 		</main>
 		<footer>
 			<img src="media/oso.png" alt="Logotipo Oso">
