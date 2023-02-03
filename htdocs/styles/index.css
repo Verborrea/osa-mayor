@@ -1,0 +1,253 @@
+#conocemas {
+	width: 80vw;
+	margin: 0 auto;
+	font-size: 18pt;
+	padding: 1em 0;
+	text-align: center;
+}
+
+#conocemas:hover {
+	transform: scale(1.1);
+}
+
+#conocemas img {
+	vertical-align: middle;
+	width: 1em;
+}
+
+#conocemas a{
+	color: var(--white);
+	text-decoration: none;
+}
+
+h1 {
+	font-size: 30pt;
+	text-align: center;
+	margin: 1.5rem;
+}
+header {
+	padding-bottom: 0 !important;
+}
+
+section {
+	padding: 2em 0;
+}
+
+@media(min-width:600px){h1{font-size: 40pt}}
+/* ======================== Section - Intro ======================== */
+#intro_img {
+	width: 100vw;
+	display: block;
+}
+#intro {
+	position: relative;
+	padding-top: 0 !important;
+}
+#introbox {
+	position: relative;
+}
+#introbox h1 {
+	margin: -1px auto;
+	padding-top: 1rem;
+	color: var(--white);
+	background-color: var(--black);
+	text-shadow: var(--black) 0 0 30px;
+}
+#introbox-cont{
+	font-size: 14pt;
+	padding: 1.5rem;
+	color: var(--white);
+	line-height: 1.5em;
+	background-color: var(--black);
+}
+#introbox-cont div {
+	margin-bottom: 1rem;
+}
+#introbox a{
+	display: block;
+	text-decoration: none;
+	font-size: 14pt;
+	color: var(--enfasis1);
+	text-align: right;
+}
+@media(min-width:1000px){
+	#introbox h1 {
+		background-color: unset;
+		padding: 0.5rem 0;
+	}
+	#introbox {
+		position: absolute;
+		bottom: 10%;
+		right: 0;
+		width: 75%;
+		max-width: 60em;
+	}
+	#introbox-cont {
+		box-shadow: -18px 18px 0 -5px var(--white),
+		-18px 18px 0 5px var(--black);
+		font-size: 18pt;
+	}
+	#introbox a{
+		font-size: 18pt;
+	}
+}
+/* ====================== Section - Prensa ======================= */
+#article-container {
+	display: flex;
+	flex-direction: column;
+}
+.article:nth-child(even) {
+	background-color: var(--black);
+	color: var(--white);
+}
+.article {
+	text-align: center;
+	padding: 1em;
+	margin: 0 1.5em;
+	flex: 1;
+	box-shadow: 0 0 8px #00000028;
+}
+.article:hover {
+    transform: scale(1.1);
+}
+.article img {
+	width: 80%;
+}
+.art-tit {
+	font-size: 18pt;
+	margin: 0.5em 0;
+}
+.article a{
+	display: block;
+	width: fit-content;
+	text-decoration: none;
+	font-size: 14pt;
+	color: var(--white);
+	background-color: var(--black);
+	margin: 0.5em auto;
+    padding: 0.5em 1em;
+    border: 4px solid var(--enfasis1);
+    border-radius: 22px;
+}
+.article a:hover {
+	color: var(--black);
+	background-color: var(--white);
+}
+@media(min-width:700px) {
+	#article-container {
+		flex-direction: row;
+		width: 75%;
+		margin: 0 auto;
+	}
+	.art-res {
+		font-size: 14pt;
+	}
+}
+/* ====================== Section - Familia ====================== */
+.fam-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center; 
+	padding: 0 1em;
+}
+.fam-img {
+	max-width: 100%;
+	height: auto;
+	border:8px solid var(--black);
+	border-radius: 50%;
+}
+.message {
+	color: var(--white);
+	font-size: 14pt;
+	text-align: center;
+	max-width: 33em;
+	padding: 3em 2em;
+	background-image: url(../media/back2.png);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.author {
+	font-size: 20pt;
+}
+.rol {
+	color: #848484;
+	font-size: 14pt;
+}
+.author, .rol {
+	padding-right: 2rem;
+	text-align: right;
+}
+.swiffy-slider{
+	--swiffy-slider-nav-light: var(--black) !important;
+}
+.slider-indicators>* {
+	background-color: var(--black) !important;
+}
+.slider-nav::before {
+	padding: 0 !important;
+}
+@media (min-width: 800px) {
+	.fam-container {
+		flex-direction: row;
+		justify-content: center;
+	}
+	.fam-mes {
+		padding: 0 1em;
+	}
+	.message {
+		background-image: url(../media/back.png);
+		padding: 2em 1em 3em 1em;
+		font-size: 16pt;
+	}
+}
+/* ======================= Section - Ayuda ======================= */
+#ayuda {
+	margin: 0 2em 2em 2em;
+}
+#ayuda_flex {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+#ayuda_flex div {
+	flex-basis: 45%;
+	font-size: 16pt;
+	line-height: 1.5rem;
+}
+#ayuda_flex a{
+	color: var(--enfasis1);
+	text-decoration: none;
+}
+form>label {
+    font-size: 10pt;
+    font-weight: bold;
+    color: var(--white);
+}
+form input[type=text], input[type=email], textarea {
+	display: block;
+	background-color: var(--gris2);
+	color: var(--gris);
+	font: 16pt "Baby Doll", "BabyDoll";
+	border-radius: 5px;
+	border: none;
+	width: 100%;
+	padding: 5px;
+}
+#ayuda h1 {
+	margin: 1.5rem 0;
+}
+
+@media (min-width: 600px) {
+	#ayuda {
+		margin: 0 10% 2em 10%;
+	}
+	#ayuda h1 {
+		text-align: left;
+	}
+	#ayuda_flex {
+		flex-direction: row;
+	} 
+	#radiobts {
+		margin: 0.5em auto;
+	}
+}

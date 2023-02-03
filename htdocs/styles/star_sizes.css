@@ -1,0 +1,88 @@
+.star {
+	position: absolute;
+	border-radius: 50%;
+	background-color: var(--hover);
+	text-align: center;
+}
+
+.star, .star a{
+	color: var(--hover);
+	position: absolute;
+	transform: translateX(-50%);
+	font-size: 16pt;
+	text-decoration: none;
+}
+
+.star>a::before {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    width: 150%;
+    height: 150%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+
+@media (min-width: 700px) {
+    .star>a::before {
+        width: 200%;
+        height: 200%;
+    }
+}
+
+#star1 {
+	width: 10px; height: 10px;
+	top: 16.5%; left: 5.5%;
+}
+#star2 {
+	width: 17px; height: 17px;
+	top: 14.6%; left: 27.7%;
+}
+#star3 {
+	width: 12px; height: 12px;
+	top: 31.1%; left: 39.5%;
+}
+#star4 {
+	width: 15px; height: 15px;
+	top: 48.9%; left: 55.7%;
+}
+#star5 {
+	width: 17px; height: 17px;
+	top: 54.5%; left: 90%;
+}
+#star6 {
+	width: 21px; height: 21px;
+	top: 84.3%; left: 83.1%;
+}
+#star7 {
+	width: 10px; height: 10px;
+	top: 76.5%; left: 57.2%;
+}
+
+#star1 a{
+	bottom: -1.5em;
+}
+#star2 a{
+	top: -1.2em;
+}
+#star3 a{
+	top: 1.3em;
+}
+#star4 a{
+	bottom: 1em;
+	left: 150%;
+}
+#star5 a{
+	transform: translateX(0);
+	transform: translateY(-50%);
+	left: 150%;
+}
+#star6 a{
+	bottom: -1.2em;
+	left: 150%;
+}
+#star7 a{
+	bottom: -1.2em;
+}

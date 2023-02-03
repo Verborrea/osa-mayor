@@ -1,0 +1,6 @@
+<IfModule mod_headers.c>
+    Header set Access-Control-Allow-Origin "*"
+</IfModule>
+RewriteEngine On
+RewriteCond %{REQUEST_URI}  !(\.ico|\.png|\.jpg|\.webp|\.eot|\.ttf|\.woff|\.woff2|\.gif|\.jpeg|\.zip|\.css|\.svg|\.js|\.pdf)$
+RewriteRule (.*) routes.php [QSA,L]
