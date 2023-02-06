@@ -25,9 +25,6 @@ h1 {
 	text-align: center;
 	margin: 1.5rem;
 }
-header {
-	padding-bottom: 0 !important;
-}
 
 section {
 	padding: 2em 0;
@@ -117,21 +114,27 @@ section {
 	font-size: 18pt;
 	margin: 0.5em 0;
 }
-.article a{
+.article>a{
 	display: block;
-	width: fit-content;
-	text-decoration: none;
-	font-size: 14pt;
-	color: var(--white);
-	background-color: var(--black);
-	margin: 0.5em auto;
+    width: fit-content;
+    text-decoration: none;
+    font-size: 14pt;
+    color: var(--black);
+    background-color: var(--white);
+    margin: 0.5em auto;
     padding: 0.5em 1em;
-    border: 4px solid var(--enfasis1);
+    border: 4px solid var(--black);
     border-radius: 22px;
+    transition: all 0.5s ease;
+}
+.article:nth-child(even)>a{
+	color: var(--white);
+    background-color: var(--black);
+    border: 4px solid var(--white);
 }
 .article a:hover {
-	color: var(--black);
-	background-color: var(--white);
+	color: var(--white);
+	background-color: var(--enfasis1);
 }
 @media(min-width:700px) {
 	#article-container {

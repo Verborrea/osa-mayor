@@ -16,11 +16,11 @@
 	</head>
 	<body>
 		<header>
-			<div id="logo">
+			<a id="logo" href="/" title="Página de Inicio">
 				<img src="media/logo_header.png" width="500px" alt="Agustina y la Osa Mayor - Logo">
 				<br>
 				FACILITADORES SOLIDARIOS
-			</div>
+			</a>
 			<div id="sky">
 				<div id="container_gif1"><img id="gif1" src="media/gif1.gif"></div>
 				<div id="ursa">

@@ -21,45 +21,7 @@
 	</head>
 
 	<body>
-		<header>
-			<div id="logo">
-				<img src="media/logo_header.png" width="500px" alt="Agustina y la Osa Mayor - Logo">
-				<br>
-				FACILITADORES SOLIDARIOS
-			</div>
-			<div id="sky">
-				<div id="container_gif1"><img id="gif1" src="media/gif1.gif"></div>
-				<div id="ursa">
-					<img id="star_path" src="media/camino.png">
-					<div class="star" id="star1">
-						<a href="/">Inicio</a>
-					</div>
-					<div class="star" id="star2">
-						<a href="/nosotros">Nosotros</a>
-					</div>
-					<div class="star" id="star3">
-						<a href="/voluntariado">Volun<br>tari<br>ado</a>
-					</div>
-					<div class="star" id="star4">
-						<a href="/404">Donacio<br>nes</a>
-					</div>
-					<div class="star" id="star5">
-						<a href="/contacto">Con<br>tac<br>to</a>
-					</div>
-					<div class="star" id="star6">
-						<a href="/blog">Blog</a>
-					</div>
-					<div class="star" id="star7">
-						<a href="/404">Tienda</a>
-					</div>
-				</div>
-				<div id="container_gif2"><img id="gif2" img src="media/gif2.gif"></div>
-			</div>
-			<div id="conocemas">
-				<img src="media/svg/arrow.svg">
-				<a href="#intro_img">Conoce más sobre nosotros...</a>
-			</div>
-		</header>
+		<?php include "header.php" ?>
 		<main>
 			<section id="intro">
 				<img id="intro_img" src="media/imgs/intro.jpg" alt="Ayuda Social">
@@ -86,9 +48,6 @@
 				<h1>Dejando una <b>huella</b> en la prensa</h1>
 				<div id="article-container">
 					<?php
-					// $servername = "sql310.epizy.com";
-					// $username = "epiz_33068761";
-					// $password = "Tp8zxfonyYwji";
 
 					$servername = "localhost";
 					$username = "root";
@@ -149,15 +108,13 @@
 								<img class="fam-img" src="media/imgs/angela.png">
 								<div class="fam-mes">
 									<div class="message">
-										“Agustina es mi familia, es encontrar el lugar en el que mi propósito de vida,
-										mi pasión y lo que hago están en sintonía. Nada es tan poderoso como vivir para
-										servir.”
+										“Este es un mensaje de prueba. Aquí debería ir el mensaje del miembro mencionado.”
 									</div>
 									<div class="author">
 										Otro Miembro
 									</div>
 									<div class="rol">
-										Fundadora
+										Otro Rol
 									</div>
 								</div>
 							</div>
@@ -175,7 +132,7 @@
 										Otro Miembro
 									</div>
 									<div class="rol">
-										Fundadora
+										Otro rol
 									</div>
 								</div>
 							</div>
@@ -211,7 +168,7 @@
 							<label id="name-l">Nombre o Razón Social</label>
 							<input id="name" name="nombre" type="text" placeholder="Nombre o Razón Social" required>
 							<label id="correo-l">Correo Electrónico</label>
-							<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required>
+							<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required >
 							<label id="msg-l">¿Por qué?</label>
 							<textarea id="msg" name="razon" rows="4" placeholder="¿Por qué?" required></textarea>
 							<div id="radiobts" style="display: flex;">
@@ -232,4 +189,21 @@
 		</main>
 		<?php include "footer.php" ?>
 	</body>
+	<script>
+		// Cambiar el slider automáticamente cada 4 segundos
+		function moveSlider() {
+			document.querySelector(".slider-nav-next").click();
+			setTimeout(moveSlider, 4000);
+		}
+		setTimeout(moveSlider, 4000);
+
+		// Mostrar la etiqueta de las entradas en los formularios
+		let form_elements = Array.from(document.forms[0].elements);
+		for (let input of form_elements) {
+			input.oninput = ()=> {
+				let label = document.querySelector("#" + input.id + "-l");
+				label.style.color = (input.value == "")?"white":"black";
+			};
+		}
+	</script>
 </hmtl>

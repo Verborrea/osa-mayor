@@ -5,6 +5,8 @@ header {
 }
 
 #logo {
+	display: block;
+	text-decoration: none;
 	text-align: center;
 	padding: 1em;
 	margin-bottom: 1em;
@@ -63,6 +65,9 @@ header {
 	#logo img{
 		width: 500px;
 	}
+	.star>a {
+		font-size: 16pt;
+	}
 	#logo {
 		font-size: 20pt;
 		margin-bottom: 0;
@@ -76,6 +81,9 @@ header {
 @media (min-width: 900px) {
 	#logo img{
 		width: 80vh;
+	}
+	.star>a {
+		font-size: 19pt;
 	}
 }
 
