@@ -60,7 +60,7 @@
                     <h1>Esta página no está disponible por ahora. Vuelve a intentarlo más tarde.</h1>
                 </div>
             </div>
-            <a href="index.html">Volver al Inicio</a>
+            <a href="/">Volver al Inicio</a>
         </main>
         <?php include "footer.php" ?>
     </body>
