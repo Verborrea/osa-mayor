@@ -17,6 +17,9 @@
     $result = $conn->query($sql);                   
     if ($result->num_rows > 0) {
         while($row = $result->fetch_assoc()) {
+			$s = html_entity_decode(htmlspecialchars_decode($row["contenido"]));
+			$sub = substr($s, 0, 150);
+			$prev = strip_tags($sub) . "...";
             $autor = $row["autor"];
             $titulo = $row["titulo"];
             $contenido = html_entity_decode(htmlspecialchars_decode($row["contenido"]));
@@ -33,6 +36,9 @@
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta property="og:title" content="<?php echo $titulo?>" />
+		<meta property="og:description" content="<?php echo $prev?>"/>
+		<meta property="og:image" content="agustinaylaosamayor.rf.gd/articles/<?php echo $portada?>" />
 		<title><?php echo $titulo; ?></title>
 		<link rel="apple-touch-icon" sizes="180x180" href="icons/apple-touch-icon.png">
 		<link rel="icon" type="image/png" sizes="32x32" href="icons/favicon-32x32.png">
@@ -92,18 +98,21 @@
 					<div id="media-box">
 						<div class="share-text">Share</div>
 						<div class="floating-icon-container">
-							<div class="social-icon-box" data-sharer="twitter"
+							<a class="social-icon-box" data-sharer="twitter"
+							href="https://twitter.com/intent/tweet?text=Lee%20este%20artículo%20de%20Agustina%20y%20la%20Osa%20Mayor:%20agustinaylaosamayor.rf.gd/articulos/<?php echo $myid?>"
 								data-url="/ideas/principles/web-design/best-modern-fonts-for-websites/" data-via="AdobeXD"
 								data-title="The fonts you choose to use on your website play a vital role in your user experience (UX). Here's our pick of the best modern fonts for websites.">
-								<svg width="13.502" height="10.971" viewBox="0 0 13.502 10.971" class="twitter-icon social-icon">
+								<svg width="13.502" height="10.971" viewBox="0 0 13.502 10.971" class="twitter-icon social-icon" >
 									<g id="Group_71335" data-name="Group 71335" transform="translate(-1325.123 -792.31)">
 										<path id="Path_40034" data-name="Path 40034"
 											d="M79.246,109.421a7.828,7.828,0,0,0,7.882-7.882c0-.12,0-.239-.008-.358A5.637,5.637,0,0,0,88.5,99.748a5.529,5.529,0,0,1-1.591.436,2.78,2.78,0,0,0,1.218-1.532,5.551,5.551,0,0,1-1.759.672,2.773,2.773,0,0,0-4.721,2.526,7.865,7.865,0,0,1-5.709-2.894,2.772,2.772,0,0,0,.858,3.7,2.75,2.75,0,0,1-1.257-.347v.035a2.771,2.771,0,0,0,2.222,2.716,2.766,2.766,0,0,1-1.251.048,2.773,2.773,0,0,0,2.588,1.924,5.558,5.558,0,0,1-3.44,1.188,5.639,5.639,0,0,1-.659-.04,7.843,7.843,0,0,0,4.246,1.242"
 											transform="translate(1250.123 693.86)"></path>
 									</g>
 								</svg>
-							</div>
-							<div class="social-icon-box" data-sharer="facebook"
+								
+							</a>
+							<a class="social-icon-box" data-sharer="facebook" data-href = "agustinaylaosamayor.rf.gd/articulos/<?php echo $myid?>"
+							href = "https://www.facebook.com/sharer/sharer.php?&u=agustinaylaosamayor.rf.gd/articulos/<?php echo $myid?>"
 								data-url="/ideas/principles/web-design/best-modern-fonts-for-websites/"
 								data-title="The fonts you choose to use on your website play a vital role in your user experience (UX). Here's our pick of the best modern fonts for websites.">
 								<svg width="7.465" height="13.582" viewBox="0 0 7.465 13.582" class="facebook-icon social-icon">
@@ -113,8 +122,8 @@
 											transform="translate(1294 786)"></path>
 									</g>
 								</svg>
-							</div>
-							<a class="social-icon-box" href="javascript:void(0)" tooltip="Copied" onclick="copyFunction();">
+							</a>
+							<a class="social-icon-box" href="javascript:void(0)" tooltip="Copied" onclick="navigator.clipboard.writeText('agustinaylaosamayor.rf.gd/articulos/<?php echo $myid?>');">
 								<svg xmlns="http://www.w3.org/2000/svg" width="12.167" height="12.146" viewBox="0 0 20.653 20.791">
 									<g id="noun_link_1098681" transform="translate(-20.1 -19.9)">
 										<g id="Group_161749" data-name="Group 161749" transform="translate(20.1 19.9)">
