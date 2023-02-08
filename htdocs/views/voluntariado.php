@@ -90,7 +90,7 @@
 							</span>
 							<span id="span-num">
 								<label id="numero-l">Número de contacto</label>
-								<input id="numero" name="numero" type="tel" placeholder="Número de contacto" required>
+								<input id="numero" name="numero" type="tel" pattern="[0-9]{9}" title="Un número de teléfono válido consta de 9 dígitos." placeholder="Número de contacto" required>
 							</span>
 						</div>
 						<label id="resumen-l">Cuentanos un poco sobre tí</label>
