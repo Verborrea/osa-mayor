@@ -35,30 +35,37 @@
 #star1 {
 	width: 10px; height: 10px;
 	top: 16.5%; left: 5.5%;
+	animation-delay: 1s;
 }
 #star2 {
 	width: 17px; height: 17px;
 	top: 14.6%; left: 27.7%;
+	animation-delay: 2s;
 }
 #star3 {
 	width: 12px; height: 12px;
 	top: 31.1%; left: 39.5%;
+	animation-delay: 3s;
 }
 #star4 {
 	width: 15px; height: 15px;
 	top: 48.9%; left: 55.7%;
+	animation-delay: 4s;
 }
 #star5 {
 	width: 17px; height: 17px;
 	top: 54.5%; left: 90%;
+	animation-delay: 5s;
 }
 #star6 {
 	width: 21px; height: 21px;
 	top: 84.3%; left: 83.1%;
+	animation-delay: 6s;
 }
 #star7 {
 	width: 10px; height: 10px;
 	top: 76.5%; left: 57.2%;
+	animation-delay: 7s;
 }
 
 #star1 a{

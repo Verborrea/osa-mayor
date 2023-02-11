@@ -57,12 +57,11 @@ section {
 	line-height: 1.5em;
 	background-color: var(--black);
 }
-#introbox-cont div {
-	margin-bottom: 1rem;
+#introbox-cont p {
+	color: var(--white);
 }
 #introbox a{
 	display: block;
-	text-decoration: none;
 	font-size: 14pt;
 	color: var(--enfasis1);
 	text-align: right;
