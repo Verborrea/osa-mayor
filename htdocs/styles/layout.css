@@ -1,19 +1,20 @@
 @font-face {
-    font-family: 'BabyDoll';
+	font-family: 'BabyDoll';
 	src: url('fonts/BabyDoll.eot');
-    src: url('fonts/BabyDoll.eot#iefix') format("embedded-opentype"),
+	src: url('fonts/BabyDoll.eot#iefix') format("embedded-opentype"),
 		url('fonts/BabyDoll.woff2') format('woff2'),
-        url('fonts/BabyDoll.woff') format('woff'),
+		url('fonts/BabyDoll.woff') format('woff'),
 		url('fonts/BabyDoll.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
 }
 
 @font-face {
 	font-family: 'blogFont';
 	src: url('fonts/supernettcn.woff') format('woff');
 }
+
 :root {
 	--black: #000000;
 	--white: #FFFFFF;
@@ -24,25 +25,32 @@
 	--gris2: #d9d9d9;
 	--img-size: 250px
 }
+
 ::-webkit-scrollbar {
 	width: 0;
 }
+
 html {
 	scroll-behavior: smooth;
 }
+
 * {
 	box-sizing: border-box;
 }
+
 body {
 	margin: 0;
 	font-family: "BabyDoll";
 }
-h1 b{
+
+h1 b {
 	color: var(--enfasis1);
 }
+
 main p {
 	color: var(--enfasis2);
 }
+
 footer {
 	background-image: url(../media/pattern.png);
 	text-align: center;
@@ -50,28 +58,36 @@ footer {
 	font-size: 13pt;
 	padding: 2em 1em;
 }
+
 footer a img {
-    margin: 0 1em;
+	margin: 0 1em;
 }
-#footer_navbar a{
+
+#footer_navbar a {
 	text-decoration: none;
 	color: var(--white);
 }
-#footer_navbar a:hover{
+
+#footer_navbar a:hover {
 	color: var(--hover);
 }
+
 #footer_navbar {
 	padding: 1em 0;
 }
-footer #copyright{
+
+footer #copyright {
 	margin: 0;
 }
+
 footer>a:hover {
-    transform: scale(1.3);
+	transform: scale(1.3);
 }
+
 footer>a {
-    display: inline-block;
+	display: inline-block;
 }
+
 input[type=submit] {
 	display: block;
 	font: 16pt "BabyDoll";
@@ -83,21 +99,26 @@ input[type=submit] {
 	border: 4px solid var(--black);
 	border-radius: 22px;
 }
+
 input[type=submit]:hover {
 	background-color: var(--gris2);
 	color: var(--black);
 	border-color: var(--black);
-} 
+}
+
 @media (min-width: 600px) {
 	.social_media {
 		height: 35px;
 	}
 }
+
 p.error {
-    color: red;
-    font-size: 12pt;
+	color: red;
+	font-size: 12pt;
+	margin: 0;
 }
+
 p.exito {
-    color: rgb(0, 170, 255);
-    font-size: 12pt;
+	color: rgb(0, 170, 255);
+	font-size: 12pt;
 }

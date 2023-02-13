@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="es-PE">
 <head>
-	<?php require('partials/head.php'); ?>
+	<?php require base_path('views/partials/head.php') ?>
 	<meta property="og:title" content="<?= $articulo['titulo'] ?>" />
 	<meta property="og:description" content="<?= $articulo['descripcion'] ?>" />
 	<meta property="og:image" content="agustinaylaosamayor.rf.gd/articles/<?= $articulo['portada'] ?>" />
@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../styles/articulo.css">
 </head>
 <body>
-<?php require('partials/header.php'); ?>
+	<?php require base_path('views/partials/header.php') ?>
 	<main>
 		<img id="portada" src="articles/<?= $articulo['portada'] ?>" alt="Portada del artículo">
 		<div class="btn-holder">
@@ -25,7 +25,7 @@
 					<div class="share-text">Share</div>
 					<div class="floating-icon-container">
 						<a class="social-icon-box" data-sharer="twitter"
-						href="https://twitter.com/intent/tweet?text=Lee%20este%20artículo%20de%20Agustina%20y%20la%20Osa%20Mayor:%20agustinaylaosamayor.rf.gd/articulos/<?= $articulo['id'] ?>"
+						href="https://twitter.com/intent/tweet?text=Lee%20este%20artículo%20de%20Agustina%20y%20la%20Osa%20Mayor:%20agustinaylaosamayor.rf.gd/articulos?id=<?= $articulo['id'] ?>"
 							data-url="/ideas/principles/web-design/best-modern-fonts-for-websites/" data-via="AdobeXD"
 							data-title="The fonts you choose to use on your website play a vital role in your user experience (UX). Here's our pick of the best modern fonts for websites.">
 							<svg width="13.502" height="10.971" viewBox="0 0 13.502 10.971" class="twitter-icon social-icon" >
@@ -37,8 +37,8 @@
 							</svg>
 							
 						</a>
-						<a class="social-icon-box" data-sharer="facebook" data-href = "agustinaylaosamayor.rf.gd/articulos/<?= $articulo['id'] ?>"
-						href = "https://www.facebook.com/sharer/sharer.php?&u=agustinaylaosamayor.rf.gd/articulos/<?= $articulo['id'] ?>"
+						<a class="social-icon-box" data-sharer="facebook" data-href = "agustinaylaosamayor.rf.gd/articulos?id=<?= $articulo['id'] ?>"
+						href = "https://www.facebook.com/sharer/sharer.php?&u=agustinaylaosamayor.rf.gd/articulos?id=<?= $articulo['id'] ?>"
 							data-url="/ideas/principles/web-design/best-modern-fonts-for-websites/"
 							data-title="The fonts you choose to use on your website play a vital role in your user experience (UX). Here's our pick of the best modern fonts for websites.">
 							<svg width="7.465" height="13.582" viewBox="0 0 7.465 13.582" class="facebook-icon social-icon">
@@ -49,7 +49,7 @@
 								</g>
 							</svg>
 						</a>
-						<a class="social-icon-box" href="javascript:void(0)" tooltip="Copied" onclick="navigator.clipboard.writeText('agustinaylaosamayor.rf.gd/articulos/<?= $articulo['id'] ?>');">
+						<a class="social-icon-box" href="javascript:void(0)" tooltip="Copied" onclick="navigator.clipboard.writeText('agustinaylaosamayor.rf.gd/articulos?id=<?= $articulo['id'] ?>');">
 							<svg xmlns="http://www.w3.org/2000/svg" width="12.167" height="12.146" viewBox="0 0 20.653 20.791">
 								<g id="noun_link_1098681" transform="translate(-20.1 -19.9)">
 									<g id="Group_161749" data-name="Group 161749" transform="translate(20.1 19.9)">
@@ -91,7 +91,7 @@
 			<div id="otrosarticulos-container">
 			<?php foreach ($otros as $otro): ?>
 			
-				<a class="otro" href="articulos/<?= $otro['id'] ?>">
+				<a class="otro" href="articulos?id=<?= $otro['id'] ?>">
 					<img class="thumbnail" src="../articles/<?= $otro['portada'] ?>">
 					<div class="otro-info">
 						<div class="otro-cat"><?= $otro['categoria'] ?></div>
@@ -134,6 +134,6 @@
 			return post.innerText.match(/\w+/g).length;
 		}
 	</script>
-<?php require('partials/footer.php'); ?>
+<?php require base_path('views/partials/footer.php') ?>
 </body>
 </html>

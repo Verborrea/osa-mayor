@@ -1,23 +1,27 @@
 <?php
 
-require('Database.php');
+use Core\App;
+use Core\Database;
 
-$db = new Database();
-$articulos = $db->query("SELECT DISTINCT categoria FROM articulos")->fetchAll();
+$db = App::resolve(Database::class);
+$articulos = $db->query('SELECT DISTINCT categoria FROM articulos')->get();
 
 $categorias = array();
 foreach ($articulos as $key => $value) {
     $categorias[$articulos[$key]["categoria"]] = [];
 }
 
-$articulos = $db->query("SELECT * FROM articulos")->fetchAll();
+$articulos = $db->query('SELECT * FROM articulos')->get();
 
 foreach ($articulos as $key=>$articulo) {
-    $articulos[$key]["contenido"] = substr(strip_tags($articulo["contenido"]), 0, 100);
+    $articulos[$key]["contenido"] = getDescription($articulo["contenido"]);
 }
 
 foreach ($articulos as $articulo)  {
     array_push($categorias[$articulo["categoria"]], $articulo);
 }
 
-require('views/blog.view.php');
+view("blog.view.php", [
+    'categorias' => $categorias,
+	'articulos' => $articulos
+]);

@@ -1,3 +1,3 @@
 <?php
 
-require('views/nosotros.view.php');
+view("nosotros.view.php");

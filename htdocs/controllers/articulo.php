@@ -1,17 +1,24 @@
 <?php
 
-require('Database.php');
+use Core\App;
+use Core\Database;
 
-$db = new Database();
-$articulo = $db->query("SELECT * FROM articulos where id = ?", [$_GET['id']])->fetch();
-
-$articulo["descripcion"] = substr(strip_tags($articulo["contenido"]), 0, 100).'...';
+$db = App::resolve(Database::class);
 
 
-$otros = $db->query("SELECT * FROM articulos where id <> ? ORDER BY RAND() LIMIT 2", [$_GET['id']])->fetchAll();
+$articulo = $db->query('SELECT * FROM articulos where id = :id', [
+	'id' => $_GET['id']
+])->find();
+$articulo["descripcion"] = getDescription($articulo["contenido"]);
 
+
+$otros = $db->query("SELECT * FROM articulos where id <> ? ORDER BY RAND() LIMIT 2", [$_GET['id']])->get();
 foreach ($otros as $key => $otro) {
-	$otros[$key]["descripcion"] = substr(strip_tags($otro["contenido"]), 0, 100).'...';
+	$otros[$key]["descripcion"] = getDescription($otro["contenido"]);
 }
 
-require('views/articulo.view.php');
+
+view("articulo.view.php", [
+	'articulo' => $articulo,
+	'otros' => $otros
+]);

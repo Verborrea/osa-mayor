@@ -53,7 +53,7 @@
 				<div class="text">VIGILANTE</div>
 			</div>
 		</div>
-		<div id="cons-container">
+		<section id="cons-container">
 			<div>
 				<h1>Forma parte de nuestra <b>constelación</b></h1>
 				<p>
@@ -70,15 +70,23 @@
 				</p>
 			</div>
 			<div>
-				<form action="formVoluntariado.php" method="post">
+				<form action="#cons-container" method="post">
 					<label id="name-l">Nombre Completo</label>
-					<input id="name" name="name" type="text" placeholder="Nombre Completo" required>
+					<input id="name" name="nombre" type="text" placeholder="Nombre Completo" required
+					value=<?= $_POST['nombre'] ?? '' ?>>
+
 					<label id="date-l">Fecha de Nacimiento</label>
-					<input id="date" name="date" type="date" placeholder="Fecha de Nacimiento" required>
+					<input id="date" name="date" type="date" placeholder="Fecha de Nacimiento" required
+					value=<?= $_POST['date'] ?? '' ?>>
+
 					<label id="correo-l">Correo Electrónico</label>
-					<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required>
+					<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required
+					value=<?= $_POST['correo'] ?? '' ?>>
+
 					<label id="prof-l">Profesión u ocupación</label>
-					<input id="prof" name="prof" type="text" placeholder="Profesión u ocupación" required>
+					<input id="prof" name="prof" type="text" placeholder="Profesión u ocupación" required
+					value=<?= $_POST['prof'] ?? '' ?>>
+
 					<div id="mid-form">
 						<span id="span-sex">
 							<label id="sexo-l">Sexo</label>
@@ -93,16 +101,20 @@
 							<label id="numero-l">Número de contacto</label>
 							<input id="numero" name="numero" type="tel" pattern="[0-9]{9}"
 								title="Un número de teléfono válido consta de 9 dígitos."
-								placeholder="Número de contacto" required>
+								placeholder="Número de contacto" required value=<?= $_POST['numero'] ?? '' ?>>
 						</span>
 					</div>
 					<label id="resumen-l">Cuentanos un poco sobre tí</label>
 					<textarea id="resumen" name="resumen" ows="4" placeholder="Cuentanos un poco sobre tí" required
-						minlength="50"></textarea>
+						minlength="50"><?= $_POST['resumen'] ?? '' ?></textarea>
 					<input type="submit" value="Enviar Solicitud">
+					<?php foreach ($errores as $error): ?>
+						<p class="error"><?= $error ?></p>
+					<?php endforeach; ?>
+					<?= '<p class="exito">'. ($exito ?? '') .'</p>' ?>
 				</form>
 			</div>
-		</div>
+		</section>
 	</main>
 	<?php require('partials/footer.php'); ?>
 </body>

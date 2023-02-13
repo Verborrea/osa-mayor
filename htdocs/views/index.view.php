@@ -22,15 +22,15 @@
 			<div id="introbox">
 				<h1>Somos <b>facilitadores</b> solidarios</h1>
 				<div id="introbox-cont">
-					<div>
+					<p>
 						Agustina y la Osa Mayor es una ONG sin fines de lucro. Somos embajadores de ayuda, no solo
 						dando a quienes les falta, sino comunicando al resto del mundo que hay todavía mucho por
 						hacer, sacando a la luz la necesidad del país.
-					</div>
-					<div>
+					</p>
+					<p>
 						Entablamos diálogo entre las instituciones o personas que necesitan y los que desean ayudar
 						pero no saben cómo.
-					</div>
+					</p>
 					<a href="/nosotros" title="Nosotros">Conoce más aquí -></a>
 				</div>
 			</div>
@@ -133,13 +133,13 @@
 					<div id="ayuda_flex2">
 						<form action="#ayuda" method="post">
 							<label id="name-l" for="name">Nombre o Razón Social</label>
-							<input id="name" name="nombre" type="text" placeholder="Nombre o Razón Social" required
+							<input id="name" name="nombre" type="text" placeholder="Nombre o Razón Social"
 								value=<?= $_POST['nombre'] ?? '' ?>>
 							<label id="correo-l" for="correo">Correo Electrónico</label>
-							<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required
+							<input id="correo" name="correo" type="email" placeholder="Correo Electrónico"
 								value=<?= $_POST['correo'] ?? '' ?>>
 							<label id="msg-l" for="razon">¿Por qué?</label>
-							<textarea id="msg" name="razon" rows="4" placeholder="¿Por qué?" required><?= $_POST['razon'] ?? '' ?></textarea>
+							<textarea id="msg" name="razon" rows="4" placeholder="¿Por qué?"><?= $_POST['razon'] ?? '' ?></textarea>
 							<div id="radiobts" style="display: flex;">
 								<span style="flex-basis: 50%;">
 									<input type="radio" id="rb1" name="tipo_ayuda" value="0" required>
@@ -150,8 +150,8 @@
 									<label for="rb2">Quiero ayudar</label>
 								</span>
 							</div>
-							<?php foreach ($errors as $error): ?>
-								<p class="error"><?= $error ?><p>
+							<?php foreach ($errores as $error): ?>
+								<p class="error"><?= $error ?></p>
 							<?php endforeach; ?>
 							<?= '<p class="exito">'. ($exito ?? '') .'</p>' ?>
 							<input type="submit" value="Enviar">

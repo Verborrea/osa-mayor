@@ -59,6 +59,7 @@ section {
 }
 #introbox-cont p {
 	color: var(--white);
+	margin-block-start: 0;
 }
 #introbox a{
 	display: block;

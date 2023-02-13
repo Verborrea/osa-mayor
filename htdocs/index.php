@@ -1,24 +1,23 @@
 <?php
 
+const BASE_PATH = __DIR__.'/';
+
+require BASE_PATH.'Core/functions.php';
+
+spl_autoload_register(function ($class) {
+    $class = str_replace('\\', DIRECTORY_SEPARATOR, $class);
+
+    require base_path("{$class}.php");
+});
+
+require base_path('bootstrap.php');
+
+$router = new \Core\Router();
+$routes = require base_path('routes.php');
+
 $uri = parse_url($_SERVER['REQUEST_URI'])['path'];
+$method = $_POST['_method'] ?? $_SERVER['REQUEST_METHOD'];
 
-$routes = [
-    '/' => 'controllers/index.php',
-    '/nosotros' => 'controllers/nosotros.php',
-    '/voluntariado' => 'controllers/voluntariado.php',
-    '/contacto' => 'controllers/contacto.php',
-    '/blog' => 'controllers/blog.php',
-    '/galeria' => 'controllers/galeria.php',
-    '/articulo' => 'controllers/articulo.php',
-];
+$router->route($uri, $method);
 
-function abort($code) {
-    http_response_code($code);
-    require "views/{$code}.php";
-}
 
-if (array_key_exists($uri, $routes)) {
-    require $routes[$uri];
-} else {
-    abort(404);
-}

@@ -11,7 +11,7 @@
 <body>
 <?php require('partials/header.php'); ?>
 	<main>
-		<div id="cons-container">
+		<section id="cons-container">
 			<div id="contact-image">
 				<img src="media/imgs/contacto.jpg">
 			</div>
@@ -20,17 +20,24 @@
 				<p>
 					Si deseas comunicarte con nosotros, puedes hacerlo en este formulario o a través de nuestras redes sociales.
 				</p>
-				<form action="form-contacto.php" method="post">
-					<label id="nombre-l">Nombre Completo</label>
-					<input id="nombre" name="nombre" type="text" placeholder="Nombre Completo" required>
-					<label id="correo-l">Correo Electrónico</label>
-					<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required>
-					<label id="msg-l">Mensaje</label>
-					<textarea id="msg" name="msg" rows="10" placeholder="Dejanos tu mensaje aquí" required></textarea>
+				<form action="#cons-container" method="post">
+					<label id="nombre-l" for="nombre">Nombre Completo</label>
+					<input id="nombre" name="nombre" type="text" placeholder="Nombre Completo" 
+					value=<?= $_POST['nombre'] ?? '' ?>>
+					<label id="correo-l" for="correo">Correo Electrónico</label>
+					<input id="correo" name="correo" type="email" placeholder="Correo Electrónico" required
+					value=<?= $_POST['correo'] ?? '' ?>>
+					<label id="msg-l" for="mensaje">Mensaje</label>
+					<textarea id="mensaje" name="mensaje" rows="10" placeholder="Dejanos tu mensaje aquí"
+					required><?= $_POST['mensaje'] ?? '' ?></textarea>
 					<input type="submit" value="Enviar Solicitud">
+					<?php foreach ($errores as $error): ?>
+						<p class="error"><?= $error ?></p>
+					<?php endforeach; ?>
+					<?= '<p class="exito">'. ($exito ?? '') .'</p>' ?>
 				</form>
 			</div>
-		</div>
+		</section>
 		<section id="contacto">
 			<h1>Contacto y <b>Redes</b> Sociales</h1>
 			<div id="datos">
