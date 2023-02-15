@@ -2,9 +2,11 @@
 <html lang="es-PE">
 <head>
 	<?php require base_path('views/partials/head.php') ?>
+	<meta property="og:url" content="http://agustinaylaosamayor.rf.gd/articulo?id=<?= $articulo['id'] ?>" />
 	<meta property="og:title" content="<?= $articulo['titulo'] ?>" />
+	<meta property="og:type" content="article" />
 	<meta property="og:description" content="<?= $articulo['descripcion'] ?>" />
-	<meta property="og:image" content="agustinaylaosamayor.rf.gd/articles/<?= $articulo['portada'] ?>" />
+	<meta property="og:image" content="http://agustinaylaosamayor.rf.gd/articles/<?= $articulo['portada'] ?>" />
 	<title><?= $articulo['titulo'] ?></title>
 	<link rel="stylesheet" href="../styles/layout.css">
 	<link rel="stylesheet" href="../styles/star_sizes.css">

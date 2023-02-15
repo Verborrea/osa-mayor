@@ -48,5 +48,6 @@ function view($path, $attributes = [])
 
 function getDescription($contenido)
 {
+    $contenido = str_replace( '<', ' <', $contenido );
     return substr(strip_tags($contenido), 0, 100);
 }
