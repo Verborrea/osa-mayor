@@ -1,0 +1,12 @@
+main {
+  margin: 2em auto;
+  width: max(70%, 400px);
+  background-color: tomato;
+}
+
+.foto>img {
+  display: block;
+  height: 300px;
+  width: 300px;
+  object-fit: cover;
+}

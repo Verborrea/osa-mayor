@@ -13,6 +13,8 @@ $router->post('/', 'controllers/index.php');
 $router->post('/voluntariado', 'controllers/voluntariado.php');
 $router->post('/contacto', 'controllers/contacto.php');
 
+
+$router->get('/admin/fotos', 'controllers/fotos/index.php');
 // $router->get('/notes', 'controllers/notes/index.php');
 // $router->get('/note', 'controllers/notes/show.php');
 // $router->delete('/note', 'controllers/notes/destroy.php');

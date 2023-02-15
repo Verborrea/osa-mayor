@@ -1,0 +1,32 @@
+header {
+  background-image: url(../../media/pattern.png);
+  padding-top: 1em;
+}
+
+#logo {
+  display: block;
+  width: fit-content;
+  margin: auto;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  font-size: 15pt;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+nav>a {
+  display: block;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 14pt;
+  padding: 1em;
+}
+
+nav>a.active {
+  color: var(--enfasis1);
+}
