@@ -1,7 +1,15 @@
-main {
+#fotos
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2em 1em;
+  width: max(75%, 400px);
   margin: 2em auto;
-  width: max(70%, 400px);
-  background-color: tomato;
+}
+
+article.foto {
+  width: 300px;
 }
 
 .foto>img {
@@ -9,4 +17,33 @@ main {
   height: 300px;
   width: 300px;
   object-fit: cover;
+  border-radius: 20px 20px 0 0;
+}
+
+.foto-description {
+  padding: 0.5em;
+  font: 14pt 'BlogFont';
+  color: var(--enfasis2);
+  background: var(--white);
+  border-left: 1px solid #bababa;
+  border-right: 1px solid #bababa;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-around;
+  background: var(--black);
+  border-radius: 0 0 20px 20px;
+}
+
+button {
+  border: unset;
+  font: 16pt 'BabyDoll';
+  color: var(--white);
+  padding: 0.5em;
+  background-color: var(--black);
+}
+
+button:hover {
+  color: gray;
 }

@@ -17,6 +17,13 @@
 			<article class="foto">
 				<img src="../gallery/<?= $foto['nombre'] ?>" alt="<?= $foto['descripcion'] ?>"
 						 title="<?= $foto['descripcion'] ?>" height="300px">
+				<div class="foto-description"><?= $foto['descripcion'] ?></div>
+				<div class="btns">
+					<button>Editar</button>
+					<form action="" method="post">
+						<button>Borrar</button>
+					</form>
+				</div>
 			</article>
 		<?php endforeach; ?>
 		</section>
