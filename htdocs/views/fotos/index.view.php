@@ -19,9 +19,11 @@
 						 title="<?= $foto['descripcion'] ?>" height="300px">
 				<div class="foto-description"><?= $foto['descripcion'] ?></div>
 				<div class="btns">
-					<button>Editar</button>
-					<form action="" method="post">
-						<button>Borrar</button>
+					<button type="button">Editar</button>
+					<form action="/admin/foto" method="post">
+						<input type="hidden" name="_method" value="DELETE">
+						<input type="hidden" name="id" value="<?= $foto['id'] ?>">
+						<button type="submit">Borrar</button>
 					</form>
 				</div>
 			</article>
